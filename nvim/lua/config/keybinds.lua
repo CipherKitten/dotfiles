@@ -8,5 +8,10 @@ vim.keymap.set("n", "<A-q>", ":bd<CR>", { silent = true })
 vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext<CR>")
 vim.keymap.set("n", "<A-Tab>", ":BufferLineCyclePrev<CR>")
 
-
+vim.keymap.set("i", "<C-k>", "coc#_select_confirm()", {
+  expr = true,
+  noremap = true,
+  silent = true
+})
+vim.keymap.set('n', 'K', ':call CocActionAsync("doHover")<CR>')
 

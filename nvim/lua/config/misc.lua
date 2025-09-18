@@ -56,11 +56,8 @@ require('lualine').setup {
   extensions = {}
 }
 
-vim.keymap.set("i", "<CR>",
-  function()
-    return vim.fn["coc#pum#visible"]() == 1
-      and vim.fn["coc#pum#confirm"]()
-      or "<CR>"
-  end,
-  { expr = true, silent = true }
-)
+
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.hlsearch = false

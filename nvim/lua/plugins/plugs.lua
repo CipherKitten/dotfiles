@@ -9,6 +9,11 @@ return {
       vim.cmd([[colorscheme gruvbox]])
     end,
   },
+  {
+      'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    config = true
+  },
 
   -- I have a separate config.mappings file where I require which-key.
   -- With lazy the plugin will be automatically loaded when it is required somewhere
@@ -24,11 +29,6 @@ return {
   {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
 
   -- lazy.nvim
-   {
-	"GustavEikaas/easy-dotnet.nvim",
-	dependencies = { "nvim-lua/plenary.nvim", 'nvim-telescope/telescope.nvim' },
-	config = function() require("easy-dotnet").setup() end,
-   },
   {
     "nvim-neorg/neorg",
     -- lazy-load on filetype
