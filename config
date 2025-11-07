@@ -9,6 +9,10 @@
 for_window [app_id="blueman-manager"] floating enabled
 for_window [app_id="iwgtk"] floating enabled
 
+#enable xwayland
+xwayland enable
+
+
 exec_always swayidle -w \
     lock 'swaylock -f -c 000000' \
     before-sleep 'swaylock -f -c 000000' \
