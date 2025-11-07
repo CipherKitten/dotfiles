@@ -1,0 +1,31 @@
+{
+    "cpu": {
+        "format": "  {usage}%",
+        "interval": 10
+    },
+
+    "memory": {
+        "format": "RAM: {used}G/{total}G",
+        "interval": 10
+    },
+    "battery": {
+        "format": "  {capacity}%"
+    },
+    "network": {
+        "interface": "wlan0",
+        "format-wifi": "  {essid}",
+        "format-disconnected": "No Internet",
+        "on-click": "iwgtk", 
+        "interval": 10
+    },
+    "bluetooth": {
+        "on-click": "blueman-manager"
+    },
+    "layer": "top",
+    "modules-left": ["sway/workspaces", "sway/mode", "cpu", "memory"],
+    "modules-center": ["clock"],
+    "modules-right": ["network", "bluetooth", "battery"]
+
+    
+}
+
